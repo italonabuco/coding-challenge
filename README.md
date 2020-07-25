@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Coding Challenge
+
+Coding challenge to demonstrate knowledge about ReactJS
+
+## Author
+
+#### Italo Nabuco<br>Full Stack Developer<br>
+italonabuco@hotmail.com<br>
+
+**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
 
 ## Available Scripts
 
