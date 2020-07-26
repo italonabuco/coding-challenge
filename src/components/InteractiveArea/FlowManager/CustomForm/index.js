@@ -49,14 +49,22 @@ class CustomForm extends React.Component {
 
     if (Object.keys(newErrors).length > 0) {
       this.setState({ errors: newErrors, isFormInvalid: true });
+      return false;
     } else {
       this.setState({ errors: {}, isFormInvalid: false });
+      return true;
     }
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.validate();
+    if (this.validate()) {
+      if (this.props.isSignIn) {
+        alert('Execute: Sign In');
+      } else {
+        alert('Execute: Sign up');
+      }
+    }
   };
 
   handleInputChange = (name, value) => this.setState({ [name]: value });
@@ -72,7 +80,9 @@ class CustomForm extends React.Component {
             type="text"
             label="Full Name"
             value={name}
-            onChange={(event) => this.handleInputChange('name', event.target.value)}
+            onChange={(event) =>
+              this.handleInputChange('name', event.target.value)
+            }
             className=""
             invalid={errors.name}
           />
@@ -81,7 +91,9 @@ class CustomForm extends React.Component {
           type="text"
           label="Users name or Email"
           value={user}
-          onChange={(event) => this.handleInputChange('user', event.target.value)}
+          onChange={(event) =>
+            this.handleInputChange('user', event.target.value)
+          }
           className=""
           invalid={errors.user || errors.email}
           invalidText={errors.email && 'Enter valid email address'}
@@ -90,17 +102,24 @@ class CustomForm extends React.Component {
           type="password"
           label={isSignIn ? 'Password' : 'Create Password'}
           value={password}
-          onChange={(event) => this.handleInputChange('password', event.target.value)}
+          onChange={(event) =>
+            this.handleInputChange('password', event.target.value)
+          }
           className=""
           invalid={errors.password}
         />
         {isSignIn && (
           <div className="d-flex justify-content-end">
-            <div className="in-form-link mb-4">Forgot password?</div>
+            <div
+              className="in-form-link"
+              onClick={() => alert('Forgot Password?')}
+            >
+              Forgot password?
+            </div>
           </div>
         )}
 
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center mt-3 mt-md-5">
           <input type="submit" value={isSignIn ? ' Sign in' : 'Sign up'} />
         </div>
       </form>
