@@ -26,6 +26,7 @@ const Slider = () => {
             return '<span class="' + className + '"></span>';
           },
         }}
+        speed={2500}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,

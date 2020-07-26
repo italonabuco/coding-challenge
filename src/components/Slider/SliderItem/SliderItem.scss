@@ -1,16 +1,19 @@
 @import '../../../assets/scss/variables';
+$Yvalue: 50px;
 
 .slider-item {
   @extend %displayFlex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  opacity: 0;
+  transition: all 1.5s ease 0.5s;
   img {
     width: 100%;
     height: auto;
   }
   .slider-item-details {
-      max-width: 80%;
+    max-width: 80%;
     .slider-item-details-title,
     .slider-item-details-description {
       text-align: center;
@@ -21,5 +24,10 @@
     .slider-item-details-description {
       @include fontSizeHeightColor(16px, 20px, $white-color);
     }
+  }
+}
+.swiper-slide-active {
+  .slider-item {
+    opacity: 1 !important;
   }
 }
