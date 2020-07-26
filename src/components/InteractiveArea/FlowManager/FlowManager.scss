@@ -1,6 +1,8 @@
 @import '../../../assets/scss/variables';
 
 .flow-manager {
+  max-width: 500px;
+  margin: auto;
   .flow-title {
     @include fontSizeHeightColor(30px, 38px, $grey-color);
     text-align: center;

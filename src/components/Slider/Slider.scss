@@ -1,0 +1,33 @@
+@import '../../assets/scss/variables';
+
+.slider {
+  height: 100%;
+  background-color: $primary-color;
+  @extend %displayFlex;
+  align-items: center;
+  .swiper-container {
+    width: 80%;
+    height: 80%;
+    .swiper-slide {
+      @extend %displayFlex;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      transition: all 0.4s ease;
+      background-color: $white-color;
+      opacity: 0.5;
+      height: 10px;
+      width: 10px;
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+        border-radius: 5px;
+        width: 26px;
+      }
+      &:focus,
+      &:focus-within,
+      &:active {
+        outline: 0px;
+      }
+    }
+  }
+}
