@@ -1,0 +1,15 @@
+@import '../../assets/scss/variables';
+
+.interactive-area {
+  @extend %heightFullvh;
+  background-color: $white-color;
+  font-family: $primary-font;
+  margin: 100px 120px 50px;
+
+  .brand-name {
+    width: 100%;
+    text-align: right;
+    @include fontStyle($brand-font, 35px, $black-color);
+    line-height: 48px;
+  }
+}

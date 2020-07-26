@@ -1,0 +1,19 @@
+@import '../../../../assets/scss/variables';
+
+.footer-content {
+  margin-top: 25px;
+  @include fontSizeHeightColor(14px, 20px, $grey-color);
+  text-align: center;
+  .terms-text {
+    font-size: 15px;
+  }
+  .footer-link {
+    @include fontSizeHeightColor(15px, 20px, $primary-color);
+    font-weight: bold;
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+      color: darken($primary-color, 10%);
+    }
+  }
+}

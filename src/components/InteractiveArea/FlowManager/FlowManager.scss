@@ -1,0 +1,24 @@
+@import '../../../assets/scss/variables';
+
+.flow-manager {
+  .flow-title {
+    @include fontSizeHeightColor(30px, 38px, $grey-color);
+    text-align: center;
+  }
+}
+
+.option-divider {
+  width: 100%;
+  .divider-text {
+    @include fontSizeHeightColor(16px, 18px, $light-grey-color);
+  }
+  .divider-line {
+    width: 30%;
+    height: 0.5px;
+    background-color: $light-grey-color;
+  }
+}
+
+.social-media-btn-text {
+  @include fontSizeHeightColor(18px, 22px, $black-color);
+}

@@ -1,0 +1,39 @@
+$primary-font: 'Mulish', sans-serif;
+$secondary-font: 'Lato', sans-serif;
+$brand-font: 'Nunito Sans', sans-serif;
+$primary-color: #a9c5ba;
+$black-color: #000;
+$grey-color: #707070;
+$light-grey-color: lighten($grey-color, 25%);
+$white-color: #fff;
+
+%heightFullvh {
+  height: 100vh;
+}
+
+%noPadding {
+  padding: 0px;
+}
+
+%noMargin {
+  margin: 0px;
+}
+
+@mixin fontSizeColor($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin fontSizeHeight($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+@mixin fontSizeHeightColor($size, $line-height, $color) {
+  @include fontSizeHeight($size, $line-height);
+  color: $color;
+}
+
+@mixin fontStyle($font, $size, $color) {
+  @include fontSizeColor($size, $color);
+  font-family: $font;
+}

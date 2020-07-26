@@ -1,40 +1,34 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+@import './assets/scss/variables';
 
-.App {
-  text-align: center;
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+body {
+  font-family: $primary-font;
+}
+
+.page-container {
+  @extend %heightFullvh;
+  @extend %noPadding;
+  .page-row {
+    @extend %heightFullvh;
+    @extend %noPadding;
+    @extend %noMargin;
+  }
+  .page-col {
+    @extend %noPadding;
+    @extend %noMargin;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slider {
+  @extend %heightFullvh;
+  background-color: $primary-color;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.show {
+  opacity: 1;
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hide {
+  display: none;
+  opacity: 0;
 }
