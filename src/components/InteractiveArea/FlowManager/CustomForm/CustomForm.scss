@@ -1,14 +1,28 @@
 @import '../../../../assets/scss/variables';
 
 .custom-form {
-    padding: 15px 3rem;
+  padding: 15px 3rem;
   .in-form-link {
-      display: block;
+    display: block;
     @include fontSizeHeightColor(14px, 16px, $grey-color);
     &:hover {
       cursor: pointer;
       text-decoration: underline;
       color: darken($grey-color, 10%);
+    }
+  }
+
+  input[type='submit'] {
+    padding: 10px 2.5rem;
+    border-radius: 20px;
+    border-width: 0px;
+    @include fontSizeHeightColor(16px, 20px, $white-color);
+    background-color: $grey-color;
+    &:focus {
+      outline-width: 0px;
+    }
+    &:hover {
+      background-color: darken($grey-color, 10%);
     }
   }
 }

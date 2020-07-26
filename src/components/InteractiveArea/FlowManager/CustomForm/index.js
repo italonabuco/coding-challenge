@@ -2,20 +2,23 @@ import React from 'react';
 import CustomInput from '../../../CustomInput';
 import './CustomForm.scss';
 
-const CustomForm = () => {
+const CustomForm = (props) => {
+  const { isSignIn } = props;
   const handleSubmit = (event) => {
     event.preventDefault();
   };
   return (
     <form onSubmit={handleSubmit} class="custom-form w-100">
-      <CustomInput
-        type="text"
-        label="Full Name"
-        value="Italo Nabuco"
-        onChange={() => {}}
-        className=""
-        // invalid
-      />
+      {!isSignIn && (
+        <CustomInput
+          type="text"
+          label="Full Name"
+          value="Italo Nabuco"
+          onChange={() => {}}
+          className=""
+          // invalid
+        />
+      )}
       <CustomInput
         type="text"
         label="Users name or Email"
@@ -26,17 +29,20 @@ const CustomForm = () => {
       />
       <CustomInput
         type="password"
-        label="Create Password"
+        label={isSignIn ? 'Password' : 'Create Password'}
         value="Italo Nabuco"
         onChange={() => {}}
         className=""
         invalid
       />
-      <div className="d-flex justify-content-end w-100">
-        <div className="in-form-link mb-4">Forgot password?</div>
-      </div>
-      <div className="d-block w-100">
-        <input type="submit" value="Enviar" />
+      {isSignIn && (
+        <div className="d-flex justify-content-end">
+          <div className="in-form-link mb-4">Forgot password?</div>
+        </div>
+      )}
+
+      <div className="d-flex justify-content-center">
+        <input type="submit" value={isSignIn ? ' Sign in' : 'Sign up'} />
       </div>
     </form>
   );

@@ -3,12 +3,55 @@
 .interactive-area {
   background-color: $white-color;
   font-family: $primary-font;
-  margin: 100px 120px 50px;
-
+  margin: 4rem 5rem 50px;
   .brand-name {
     width: 100%;
     text-align: right;
     @include fontStyle($brand-font, 35px, $black-color);
     line-height: 48px;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .interactive-area {
+    margin: 4rem 1.5rem 50px;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .interactive-area {
+    margin: 4rem 10rem 50px;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .interactive-area {
+    @include marginHorizontal(5rem);
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .interactive-area {
+    margin: 15px 10px 10px;
+  }
+  .brand-name{
+    font-size: 30px;
+  }
+
+  .flow-manager{
+    padding-top: 10px !important;
+    .flow-title{
+      font-size: 24px !important;
+      margin-bottom: 10px !important;
+    }
+  }
+
+  .option-divider{
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
   }
 }

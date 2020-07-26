@@ -20,6 +20,16 @@ $invalid-color: #ec3b3b;
   margin: 0px;
 }
 
+@mixin marginVertical($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin marginHorizontal($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
 @mixin fontSizeColor($size, $color) {
   font-size: $size;
   color: $color;

@@ -14,9 +14,11 @@ const FlowManager = () => {
 
   return (
     <div className="flow-manager d-flex flex-column align-items-center pt-5">
-      <div className="flow-title">Getting Started</div>
-      <CustomForm />
-      <div className="option-divider d-flex align-items-center justify-content-center">
+      <div className="flow-title mb-3">
+        {isSignIn ? 'Welcome to Invision' : 'Getting Started'}
+      </div>
+      <CustomForm isSignIn={isSignIn} />
+      <div className="option-divider d-flex align-items-center justify-content-center mt-3 mb-4">
         <div className="divider-line"></div>
         <div className="divider-text px-3">Or</div>
         <div className="divider-line"></div>
