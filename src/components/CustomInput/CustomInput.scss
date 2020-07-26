@@ -5,6 +5,12 @@
   label {
     @extend %noMargin;
     @include fontSizeHeightColor(14px, 18px, $grey-color);
+    @include transform(translateY(25px));
+    cursor: initial;
+    transition: all 0.35s ease;
+    &.active {
+      @include transform(translateY(0px));
+    }
   }
   input {
     width: 100%;

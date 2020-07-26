@@ -77,6 +77,7 @@ class CustomForm extends React.Component {
       <form onSubmit={this.handleSubmit} className="custom-form w-100">
         {!isSignIn && (
           <CustomInput
+            id="input-name"
             type="text"
             label="Full Name"
             value={name}
@@ -88,6 +89,7 @@ class CustomForm extends React.Component {
           />
         )}
         <CustomInput
+          id="input-user"
           type="text"
           label="Users name or Email"
           value={user}
@@ -99,6 +101,7 @@ class CustomForm extends React.Component {
           invalidText={errors.email && 'Enter valid email address'}
         />
         <CustomInput
+          id="input-password"
           type="password"
           label={isSignIn ? 'Password' : 'Create Password'}
           value={password}
