@@ -1,0 +1,33 @@
+@import '../../assets/scss/variables';
+
+.custom-input {
+  width: 100%;
+  label {
+    @extend %noMargin;
+    @include fontSizeHeightColor(14px, 18px, $grey-color);
+  }
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1.5rem;
+    border-bottom: 1px solid $grey-color;
+    // font: 600 14px 'Avenir Next Cyr', Helvetica, sans-serif;
+    @include fontSizeHeightColor(16px, 20px, $black-color);
+    &:focus {
+      border-color: darken($primary-color, 10%);
+    }
+  }
+  .invalid-text {
+    display: none;
+    @include fontSizeHeightColor(12px, 16px, $invalid-color);
+  }
+  &.invalid {
+    input {
+      border-color: $invalid-color;
+    }
+    .invalid-text {
+      display: block;
+    }
+  }
+}

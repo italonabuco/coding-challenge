@@ -1,0 +1,14 @@
+@import '../../../../assets/scss/variables';
+
+.custom-form {
+    padding: 15px 3rem;
+  .in-form-link {
+      display: block;
+    @include fontSizeHeightColor(14px, 16px, $grey-color);
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: darken($grey-color, 10%);
+    }
+  }
+}
