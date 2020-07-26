@@ -11,15 +11,16 @@ const CustomInput = (props) => {
     onChange,
     className,
     invalid,
+    invalidText
   } = props;
   return (
     <div
       className={`custom-input mb-2 ${className} ${invalid && 'invalid'}`}
       style={style}
     >
-      <label for={id}>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <input type={type} id={id} value={value} onChange={onChange} />
-      <div class="invalid-text mt-1">This field can not be empty</div>
+  <div className="invalid-text mt-1">{invalidText || 'This field can not be empty'}</div>
     </div>
   );
 };
