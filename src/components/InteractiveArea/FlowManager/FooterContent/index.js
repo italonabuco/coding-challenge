@@ -4,8 +4,8 @@ import './FooterContent.scss';
 const FooterContent = (props) => {
   const { isSignIn, onSwitch } = props;
   return (
-    <div className="footer-content">
-      <div className={!isSignIn ? 'show' : 'hide'}>
+    <div className="footer-content d-flex justify-content-center ">
+      <div className="exclusive-sign-up">
         <div>
           By signing up, you agree to <strong>Invision</strong>
         </div>
@@ -17,7 +17,7 @@ const FooterContent = (props) => {
           <span className="footer-link" onClick={onSwitch}>Log in</span>
         </div>
       </div>
-      <div className={isSignIn ? 'show' : 'hide'}>
+      <div className="exclusive-sign-in">
         <div>
           New <strong>Invision</strong>?{' '}
           <span className="footer-link" onClick={onSwitch}>Create account</span>

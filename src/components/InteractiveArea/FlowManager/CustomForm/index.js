@@ -75,19 +75,17 @@ class CustomForm extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit} className="custom-form w-100">
-        {!isSignIn && (
-          <CustomInput
-            id="input-name"
-            type="text"
-            label="Full Name"
-            value={name}
-            onChange={(event) =>
-              this.handleInputChange('name', event.target.value)
-            }
-            className=""
-            invalid={errors.name}
-          />
-        )}
+        <CustomInput
+          id="input-name"
+          type="text"
+          label="Full Name"
+          value={name}
+          onChange={(event) =>
+            this.handleInputChange('name', event.target.value)
+          }
+          className="input-sign-up"
+          invalid={errors.name}
+        />
         <CustomInput
           id="input-user"
           type="text"
@@ -111,18 +109,16 @@ class CustomForm extends React.Component {
           className=""
           invalid={errors.password}
         />
-        {isSignIn && (
-          <div className="d-flex justify-content-end">
-            <div
-              className="in-form-link"
-              onClick={() => alert('Forgot Password?')}
-            >
-              Forgot password?
-            </div>
+        <div className="d-flex justify-content-end exclusive-sign-in">
+          <div
+            className="in-form-link"
+            onClick={() => alert('Forgot Password?')}
+          >
+            Forgot password?
           </div>
-        )}
+        </div>
 
-        <div className="d-flex justify-content-center mt-3 mt-md-5">
+        <div className="d-flex justify-content-center mt-3 mt-md-4">
           <input type="submit" value={isSignIn ? ' Sign in' : 'Sign up'} />
         </div>
       </form>

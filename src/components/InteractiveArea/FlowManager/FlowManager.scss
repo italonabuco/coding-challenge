@@ -3,9 +3,31 @@
 .flow-manager {
   max-width: 500px;
   margin: auto;
+  margin-top: 0px;
+  transition: all 0.5s ease;
+
   .flow-title {
+    position: absolute;
     @include fontSizeHeightColor(30px, 38px, $grey-color);
     text-align: center;
+    transition: all 0.5s ease;
+  }
+  &.flow-sign-in {
+    margin-top: 45px;
+    .title-sign-in {
+      opacity: 1;
+    }
+    .title-sign-up {
+      opacity: 0;
+    }
+  }
+  &.flow-sign-up {
+    .title-sign-in {
+      opacity: 0;
+    }
+    .title-sign-up {
+      opacity: 1;
+    }
   }
 }
 

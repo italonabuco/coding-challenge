@@ -23,9 +23,10 @@ const FlowManager = () => {
   };
 
   return (
-    <div className="flow-manager d-flex flex-column align-items-center pt-4">
-      <div className="flow-title mb-3">
-        {isSignIn ? 'Welcome to Invision' : 'Getting Started'}
+    <div className={`flow-manager d-flex flex-column align-items-center pt-2 ${isSignIn ? 'flow-sign-in' : 'flow-sign-up'}`}>
+      <div className="d-flex justify-content-center">
+        <span className="flow-title title-sign-in">Welcome to Invision</span>
+        <span className="flow-title title-sign-up">Getting Started</span>
       </div>
       <CustomForm isSignIn={isSignIn} ref={customFormRef} />
       <div className="option-divider d-flex align-items-center justify-content-center mt-3 mb-4">
@@ -33,7 +34,10 @@ const FlowManager = () => {
         <div className="divider-text px-3">Or</div>
         <div className="divider-line"></div>
       </div>
-      <SocialMediaButton src={GoogleLogo} onClick={() => googleButtonClick(isSignIn)}>
+      <SocialMediaButton
+        src={GoogleLogo}
+        onClick={() => googleButtonClick(isSignIn)}
+      >
         <div className={'social-media-btn-text'}>
           {isSignIn ? 'Sign in with google' : 'Sign up with google'}
         </div>

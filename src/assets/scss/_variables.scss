@@ -12,6 +12,12 @@ $invalid-color: #ec3b3b;
   height: 100vh;
 }
 
+%hidden {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
 %noPadding {
   padding: 0px;
 }

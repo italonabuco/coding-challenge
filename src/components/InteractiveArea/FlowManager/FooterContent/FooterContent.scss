@@ -2,6 +2,7 @@
 
 .footer-content {
   margin-top: 25px;
+  height: 100px;
   @include fontSizeHeightColor(14px, 20px, $grey-color);
   text-align: center;
   .terms-text {
@@ -15,5 +16,22 @@
       cursor: pointer;
       color: darken($primary-color, 10%);
     }
+  }
+  .exclusive-sign-in,
+  .exclusive-sign-up {
+    position: absolute;
+    transition: all 0.5s ease;
+  }
+}
+
+.flow-sign-up {
+  .footer-content .exclusive-sign-in {
+    @extend %hidden;
+  }
+}
+
+.flow-sign-in {
+  .footer-content .exclusive-sign-up {
+    @extend %hidden;
   }
 }

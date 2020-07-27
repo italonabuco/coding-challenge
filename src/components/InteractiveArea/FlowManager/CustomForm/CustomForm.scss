@@ -2,6 +2,7 @@
 
 .custom-form {
   padding: 15px 3rem;
+  margin-top: 40px;
   .in-form-link {
     display: block;
     @include fontSizeHeightColor(14px, 16px, $grey-color);
@@ -24,5 +25,31 @@
     &:hover {
       background-color: darken($grey-color, 10%);
     }
+  }
+  .input-sign-up {
+    height: 61px;
+    &.invalid{
+      height: 75px;
+    }
+  }
+  .exclusive-sign-in {
+    height: 16px;
+  }
+  .input-sign-up,
+  .exclusive-sign-in {
+    transition: all 0.5s ease;
+    visibility: visible;
+  }
+}
+
+.flow-sign-up {
+  .custom-form .exclusive-sign-in {
+    @extend %hidden;
+  }
+}
+
+.flow-sign-in {
+  .custom-form .input-sign-up {
+    @extend %hidden;
   }
 }
