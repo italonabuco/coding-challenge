@@ -7,7 +7,7 @@
   align-items: center;
   .swiper-container {
     width: 80%;
-    height: 80%;
+    height: auto;
     .swiper-slide {
       @extend %displayFlex;
       align-items: center;
