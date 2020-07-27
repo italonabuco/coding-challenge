@@ -8,7 +8,7 @@ function App() {
     <div className="container-fluid page-container">
       <div className="row page-row">
         <div className="d-none d-lg-block col col-6 page-col">
-          <Slider></Slider>
+          <Slider/>
         </div>
         <div className="col col-12 col-lg-6 page-col">
           <InteractiveArea />

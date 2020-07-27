@@ -31,8 +31,6 @@ const Slider = () => {
           delay: 3500,
           disableOnInteraction: false,
         }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
           <SliderItem src={StoryTellingImg} title="Marcenas mattis egestas">

@@ -42,7 +42,7 @@ const FlowManager = () => {
           {isSignIn ? 'Sign in with google' : 'Sign up with google'}
         </div>
       </SocialMediaButton>
-      <FooterContent onSwitch={switchContent} isSignIn={isSignIn} />
+      <FooterContent onSwitch={switchContent} />
     </div>
   );
 };

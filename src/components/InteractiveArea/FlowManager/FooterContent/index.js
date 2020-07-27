@@ -2,7 +2,7 @@ import React from 'react';
 import './FooterContent.scss';
 
 const FooterContent = (props) => {
-  const { isSignIn, onSwitch } = props;
+  const { onSwitch } = props;
   return (
     <div className="footer-content d-flex justify-content-center ">
       <div className="exclusive-sign-up">
