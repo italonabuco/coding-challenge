@@ -7,6 +7,10 @@ Coding challenge to demonstrate knowledge about ReactJS
 #### Italo Nabuco<br>Full Stack Developer<br>
 italonabuco@hotmail.com<br>
 
+## Sample GIF
+
+![](https://github.com/italonabuco/coding-challenge/blob/master/src/assets/gifs/coding-challenge-screen.gif)
+
 **This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
 
 ## Available Scripts
